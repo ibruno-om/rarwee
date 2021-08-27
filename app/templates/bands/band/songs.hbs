@@ -1,7 +1,8 @@
 {{!-- app/templates/bands/band/songs.hbs --}}
-{{#if @model.length}}
+{{page-title @model.name " songs | Rock & Roll with Octane" replace=true}}
+{{#if @model.songs.length}}
   <ul>
-    {{#each @model as |song|}}
+    {{#each @model.songs as |song|}}
       <li class="mb-2">
         {{song.title}}
         {{!-- <span class="float-right">{{song.rating}}</span> --}}

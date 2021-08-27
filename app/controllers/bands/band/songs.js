@@ -14,8 +14,8 @@ export default class BandsBandSongsController extends Controller {
 
   @action
   saveSong() {
-    let song = new Song({ title: this.title, band: this.band });
-    this.band.songs = [...this.band.songs, song];
+    let song = new Song({ title: this.title, band: this.model });
+    this.model.songs = [...this.model.songs, song];
     this.title = '';
     this.showAddSong = true;
   }
