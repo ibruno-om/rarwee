@@ -10,6 +10,7 @@ leading-5">Name</label>
         id="name"
         class="w-full text-gray-800 bg-white border rounded-md py-2 px-4"
         value={{this.name}}
+        data-test-rr="new-band-name"
         {{on "input" this.updateName}}
       />
 
@@ -20,6 +21,7 @@ leading-5">Name</label>
       type="button"
       class="px-4 py-2 rounded bg-purple-600 shadow-md hover:shadow-lg
 hover:text-white"
+      data-test-rr="save-band-button"
       {{on "click" this.saveBand}}
     >
       Save

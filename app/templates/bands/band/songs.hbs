@@ -1,9 +1,9 @@
 {{!-- app/templates/bands/band/songs.hbs --}}
 {{page-title @model.name " songs | Rock & Roll with Octane" replace=true}}
-{{#if @model.songs.length}}
+{{#if this.sortedSongs.length}}
   <ul>
-    {{#each @model.songs as |song|}}
-      <li class="mb-2">
+    {{#each this.sortedSongs as |song|}}
+      <li class="mb-2" data-test-rr="song-list-item">
         {{song.title}}
         {{!-- <span class="float-right">{{song.rating}}</span> --}}
         <span class="float-right">
@@ -16,7 +16,7 @@
     {{/each}}
   </ul>
 {{else}}
-  <p class="text-center">
+  <p class="text-center" data-test-rr="no-songs-text">
     The band has no songs yet.
   </p>
 {{/if}}
@@ -38,12 +38,14 @@ lg hover:text-white hover:bg-purple-500 focus:outline-none"
       class="text-gray-800 bg-white rounded-md py-2 px-4"
       placeholder="Title"
       value={{this.title}}
+      data-test-rr='new-song-title'
       {{on "input" this.updateTitle}}
     />
     <button
        type="button"
        class="ml-4 px-4 py-2 rounded bg-purple-600 shadow-md
     hover:shadow-lg hover:text-white"
+      data-test-rr="save-song-button"
       {{on "click" this.saveSong}}
     >
       Save
