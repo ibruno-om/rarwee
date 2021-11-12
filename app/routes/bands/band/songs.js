@@ -7,6 +7,15 @@ import fetch from 'fetch';
 export default class BandsBandSongsRoute extends Route {
   @service catalog;
 
+  queryParams = {
+    sortBy: {
+      as: 's',
+    },
+    searchTerm: {
+      as: 'q',
+    },
+  };
+
   async model() {
     let band = this.modelFor('bands.band');
 
