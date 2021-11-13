@@ -3,7 +3,7 @@ import { visit, waitFor } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import { setupMirage } from 'ember-cli-mirage/test-support';
 import { getPageTitle } from 'ember-page-title/test-support';
-import { createBand } from '../helpers/custom-helpers';
+import { createBand } from 'rarwee/tests/helpers/custom-helpers';
 
 module('Acceptance | Bands', function (hooks) {
   setupApplicationTest(hooks);

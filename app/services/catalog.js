@@ -1,6 +1,6 @@
 import Service from '@ember/service';
-import Band from '../models/band';
-import Song from '../models/song';
+import Band from 'rarwee/models/band';
+import Song from 'rarwee/models/song';
 import { tracked } from 'tracked-built-ins';
 import { isArray } from '@ember/array';
 

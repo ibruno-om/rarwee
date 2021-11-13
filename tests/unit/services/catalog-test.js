@@ -1,8 +1,8 @@
 // tests/unit/services/catalog-test.js
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
-import Band from '../../../models/band';
-import Song from '../../../models/song';
+import Band from 'rarwee/models/band';
+import Song from 'rarwee/models/song';
 
 // module('Unit | Service | catalog', function(hooks) {
 module('Unit | Service | catalog', function (hooks) {
